@@ -1,8 +1,9 @@
 import React from 'react'
 import  bg  from "../logo2.png";
+import { Link } from 'react-router-dom';
 const Signin = () => {
-    const Signin=()=>{
-        
+    const signin=()=>{
+
     }
   return (
     <div>
@@ -18,11 +19,8 @@ const Signin = () => {
   <div className="text-center">
   <h1 className="fs-3 text-light mb-2">ImarBank</h1>
   </div>
-  <div class="col-12 col-md-12 mb-2">
-    <input type="text" class="form-control" placeholder="First name" aria-label="First name"/>
-  </div>
-  <div class="col col-md-12 mb-2">
-    <input type="text" class="form-control " placeholder="Last name" aria-label="Last name"/>
+  <div className="text-start  fs-4 mb-2 txt">
+    Signin
   </div>
   <div class="col col-md-12 mb-2">
     <input type="email" class="form-control" placeholder="Email" aria-label="Email"/>
@@ -30,18 +28,16 @@ const Signin = () => {
   <div class=" col-md-12 mb-2">
     <input type="password" class="form-control" placeholder="Password" aria-label="Password"/>
   </div>
-  <div class="col col-md-12 mb-2">
-    <input type="password" class="form-control" placeholder="Confrim-Password" aria-label="Password"/>
-  </div>
+  
   <div class="col-12 col-md-12 mb-2">
-    <button className="btn btn-success col-12 btnd " onClick={()=>signin()}>Sign up</button>
+    <button className="btn btn-success col-12 btnd " onClick={()=>signin()}>Signin</button>
   </div>
- <div className="text-warning  d-flex justify-content-center">
+ <div className="txt  d-flex justify-content-center">
  <div className="me-2">
- <h6 clasName="text-danger ">Already have an account?</h6>
+ <h6 clasName="text-danger">Don't have an account?</h6>
  </div>
  <div className="">
- <h6 clasName="text-danger col-lg-3">Login</h6>
+ <h6 clasName="text-danger col-lg-3"><Link to="/">Signup</Link></h6>
  </div>
  </div>
 </div>
