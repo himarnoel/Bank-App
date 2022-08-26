@@ -1,0 +1,63 @@
+img {
+  max-width: 100%;
+  height: auto;
+  width:70px;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+
+.draw{
+  background-color: #2daf5d !important;
+  color: white;
+}
+
+.btni{
+  background-color: rgb(32, 89, 39) !important;
+  border-bottom-left-radius: 10px !important;
+  border-top-left-radius: 10px !important;
+
+}
+
+.cur{
+  border-bottom-left-radius: 10px !important;
+  border-top-left-radius: 10px !important;
+}
+
+.cari{
+  background-image: linear-gradient(120deg, #0052F2,#00F462) !important;
+  border:none;
+  color: white !important;
+}
+
+.tcari{
+  color: rgb(212, 212, 212) !important;
+ 
+}
+
+
+
+.mf{
+height: 100vh;
+width: 100vw;
+  display: grid !important;
+  place-content: center  !important;
+  background-color: #179d4d;
+}
+
+
+
+
+.sgn{
+  border: none;
+  background-color: #2daf5d !important;
+}
+
+
+.btnd{
+  background-color: rgb(32, 89, 39) !important;
+  border: none !important;
+  color: white;
+}
