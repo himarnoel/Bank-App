@@ -1,4 +1,3 @@
 # Bank App using  React Js
 
-
-![IMG_5379](https://user-images.githubusercontent.com/56762506/187207977-37cffdad-23c3-46b8-a18a-6e099a73df7f.jpeg)
+![img](https://user-images.githubusercontent.com/56762506/187208086-6f876359-bf17-4cce-980d-d14ba674df2b.PNG)
