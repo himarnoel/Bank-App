@@ -1,6 +1,11 @@
 import React from 'react'
 
 const Table = () => {
+  
+  let i=JSON.parse(localStorage.index);
+  let fetchedData=JSON.parse(localStorage.users);
+  let bg="btn text-light rounded-5 bg-danger"
+  let bgs="btn text-light rounded-5 bg-success"
   return (
     <div>
 <div className="table-responsive">
@@ -16,45 +21,22 @@ const Table = () => {
   </tr>
 </thead>
   <tbody>
-  <tr>
-  <td>1</td>
-  <td>
-    22/03/2022
-   </td>
-  <td>  <button className="btn btn-danger rounded-5 bg-danger">Debit</button> </td>
-  <td>School fees</td>
-  <td>$240</td>
-  <td>$900,00</td>
-  </tr>
-  <tr>
-  <td>2</td>
-  <td>
-    22/03/2022
-   </td>
-  <td>  <button className="btn btn-success rounded-5 bg-success">credit</button> </td>
-  <td>School fees</td>
-  <td>$240</td>
-  <td>$900,00</td>
-  </tr><tr>
-
-  <td>3</td>
-  <td>
-    22/03/2022
-   </td>
-  <td>  <button className="btn btn-danger rounded-5 bg-danger">Debit</button> </td>
-  <td>School fees</td>
-  <td>$240</td>
-  <td>$900,00</td>
-  </tr><tr>
-  <td>4</td>
-  <td>
-    22/03/2022
-   </td>
-  <td>  <button className="btn btn-danger rounded-5 bg-danger">Debit</button> </td>
-  <td>School fees</td>
-  <td>$240</td>
-  <td>$900,00</td>
-  </tr>
+  {
+    fetchedData[i].accthis.map((data,ind)=>(
+      <tr>
+      <td>{ind+1}</td>
+      <td>
+        { fetchedData[i].accthis[(fetchedData[i].accthis.length-1)-ind].date}
+       </td>
+      <td>  <button className={fetchedData[i].accthis[(fetchedData[i].accthis.length-1)-ind].type=="credit"?bg:bgs}>{fetchedData[i].accthis[(fetchedData[i].accthis.length-1)-ind].type}</button> </td>
+      <td>{fetchedData[i].accthis[(fetchedData[i].accthis.length-1)-ind].details}</td>
+      <td>${fetchedData[i].accthis[(fetchedData[i].accthis.length-1)-ind].amount}</td>
+      <td>${fetchedData[i].accthis[(fetchedData[i].accthis.length-1)-ind].bal}</td>
+      </tr>
+    ))
+ 
+ 
+}
   </tbody>
 </table>
 </div>

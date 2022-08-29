@@ -31,10 +31,32 @@ img {
   border:none;
   color: white !important;
 }
+.cari1{ background-image: linear-gradient(120deg, #F5752E,#FA619E) !important;
+  border:none;
+  color: white !important;}
+.cari2{
+  background-image: linear-gradient(120deg, #DF3218,#E9600D) !important;
+  border:none;
+  color: white !important;
+}
+.fsn{
+  font-size: 13.4px;
 
+  
+}
+
+.car{
+  background-color: #2daf5d !important;
+  border: none;
+}
 .tcari{
   color: rgb(212, 212, 212) !important;
  
+}
+
+
+.tab{
+  border: none !important;
 }
 
 

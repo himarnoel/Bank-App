@@ -20,7 +20,7 @@ import Typography from '@mui/material/Typography';
 ///-========icons======
 import logo from "../logo2.png"
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import ShowChartIcon from '@mui/icons-material/ShowChart';
+import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 import RequestQuoteIcon from '@mui/icons-material/RequestQuote';
 import PointOfSaleIcon from '@mui/icons-material/PointOfSale';
 import DashboardIcon from '@mui/icons-material/Dashboard';
@@ -28,7 +28,10 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import {withRouter} from 'react-router-dom';
 import Dashboard from './../pages/Dasboard';
-import Transaction from './../pages/Transaction';
+import Fund from './../pages/Fund';
+import Withdral from './../pages/Withdral';
+import Transfer from './../pages/Transfer';
+import Transactions from './../pages/Transactions';
 ///-========icons======
 
 const drawerWidth = 240;
@@ -47,6 +50,10 @@ setname(name);
 setval(index);
 handleDrawerToggle()  
 }
+const logout=()=>{
+ localStorage.removeItem('index');
+ navigate("/")
+}
 
   const drawer = (
     <div className="draw h-100">
@@ -62,10 +69,10 @@ handleDrawerToggle()
       <List>
 
       {[{name:'Dashboard', icon:   <DashboardIcon sx={{ color: "#fff" }}/>},
-       {name:'Transactions', icon:    <ShowChartIcon sx={{ color: "#fff" }}/>,}, 
+       {name:'Fund Account', icon:    <AccountBalanceWalletIcon  sx={{ color: "#fff" }}/>,}, 
       {name:'Withdraw', icon:<RequestQuoteIcon sx={{ color: "#fff" }}/>},
       {name:'Transfer', icon:  <PointOfSaleIcon sx={{ color: "#fff" }} />},
-      {name:'Loan', icon:      <MailIcon sx={{ color: "#fff" }}/>}
+      {name:'Transactions', icon:      <MailIcon sx={{ color: "#fff" }}/>}
     ].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton className={index===val?"btni ms-1":"ms-1 cur"} onClick={()=>changer(text.name,index)}>
@@ -98,7 +105,7 @@ handleDrawerToggle()
           </ListItem>
 
           <ListItem  disablePadding className="pb-2">
-           <ListItemButton>
+           <ListItemButton onClick={()=>logout()}>
              <ListItemIcon>
             <LogoutIcon  sx={{ color: "#fff" }}/>
              </ListItemIcon>
@@ -184,7 +191,8 @@ handleDrawerToggle()
         <Toolbar />
              
       <Typography paragraph>
-         {val==0? <Dashboard/>:val==1?<Transaction/>:<Divider/>}
+         {val==0? <Dashboard/>:val==1?<Fund/>:val==2?<Withdral/>:val==3?<Transfer/>:val==4?<Transactions/>:<Divider/>}
+         
         </Typography>
       </Box>
  
