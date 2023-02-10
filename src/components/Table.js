@@ -28,7 +28,7 @@ const Table = () => {
       <td>
         { fetchedData[i].accthis[(fetchedData[i].accthis.length-1)-ind].date}
        </td>
-      <td>  <button className={fetchedData[i].accthis[(fetchedData[i].accthis.length-1)-ind].type=="credit"?bg:bgs}>{fetchedData[i].accthis[(fetchedData[i].accthis.length-1)-ind].type}</button> </td>
+      <td>  <button className={fetchedData[i].accthis[(fetchedData[i].accthis.length-1)-ind].type=="credit"?bg:bgs}>{fetchedData[i].accthis[(fetchedData[i].accthis.length-1)-ind].type=="credit"?"Debit":"Credit}</button> </td>
       <td>{fetchedData[i].accthis[(fetchedData[i].accthis.length-1)-ind].details}</td>
       <td>${fetchedData[i].accthis[(fetchedData[i].accthis.length-1)-ind].amount}</td>
       <td>${fetchedData[i].accthis[(fetchedData[i].accthis.length-1)-ind].bal}</td>
